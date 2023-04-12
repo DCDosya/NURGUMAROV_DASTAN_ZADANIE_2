@@ -38,9 +38,9 @@ class Main(QDialog):
             b = float(self.lineEdit_b.text())
             x = float(self.lineEdit_x.text())
             if x > 6:
-                answer = (a / x) + b / (x ** 2)
+                answer = (6 * (x ** 2) - a * b) / (x ** 2) / 2
             else:
-                answer = (a ** 2) * (x + b)
+                answer = 4 * (x + a ** 2 + b ** 2)
             self.label_answer.setText('Ответ: ' + str(format(answer, '.5f')))
             self.label_answer.setStyleSheet('   background: rgb(0, 255, 0)')
         except:
